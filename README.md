@@ -1,1 +1,60 @@
-# Asasmant-Mandiri
+[index.html](https://github.com/user-attachments/files/24158809/index.html)
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <title>ASASMANT Mandiri</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      body {
+        font-family: Segoe UI;
+        background: linear-gradient(120deg, #0f172a, #1e3a8a);
+        margin: 0;
+      }
+      .box {
+        max-width: 420px;
+        margin: 80px auto;
+        background: #fff;
+        padding: 30px;
+        border-radius: 16px;
+      }
+      h1 {
+        text-align: center;
+        color: #1e3a8a;
+      }
+      input,
+      button {
+        width: 100%;
+        padding: 12px;
+        margin: 10px 0;
+        border-radius: 10px;
+      }
+      button {
+        background: #2563eb;
+        color: #fff;
+        border: none;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <h1>ASASMANT Mandiri</h1>
+      <input id="nama" placeholder="Nama" />
+      <input id="kelas" placeholder="Kelas" />
+      <button onclick="mulai()">Mulai Aktivitas</button>
+    </div>
+
+    <script>
+      function mulai() {
+        if (!nama.value || !kelas.value) {
+          alert("Lengkapi data");
+          return;
+        }
+        localStorage.setItem("nama", nama.value);
+        localStorage.setItem("kelas", kelas.value);
+        window.location.href = "ujian.html";
+      }
+    </script>
+  </body>
+</html>
